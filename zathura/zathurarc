@@ -1,0 +1,55 @@
+set vertical-center               true
+set selection-clipboard           clipboard
+set adjust-open                   "best-fit"
+set zoom-step                     5
+set selection-notification        true
+set recolor-reverse-video         false
+set show-directories              true
+set show-hidden                   false
+set statusbar-home-tilde          true
+# set highlight-transparency        0.75
+set incremental-search            true
+set render-loading                true
+# set page-padding                  1
+set statusbar-h-padding           0
+set statusbar-v-padding           0
+
+set statusbar-bg                  "#0f0f0f"
+set statusbar-fg                  "#0AFFFF"
+
+set default-bg                    "#00000000"
+set default-fg                    "#000000"
+set recolor true
+set recolor-lightcolor            "#0C090A"
+set recolor-darkcolor             "#BDEDFF"
+set recolor-keephue true
+set recolor-reverse-video false
+
+set index-bg                      "#0f0f0f"
+set index-fg                      "#BDEDFF"
+set index-active-bg               "#0AFFFF"
+set index-active-fg               "#0f0f0f"
+
+set completion-bg                 "#0f0f0f"
+set completion-fg                 "#9AFEFF"
+set completion-highlight-bg       "#BDEDFF"
+set completion-highlight-fg       "#0f0f0f"
+
+set inputbar-bg                   "#0C090A"
+set inputbar-fg                   "#BDEDFF"
+
+set notification-bg               "#0C090A"
+set notification-fg               "#FFFF33"
+set notification-error-bg         "#0C090A"
+set notification-error-fg         "#FD1C03"
+set notification-warning-bg       "#0C090A"
+set notification-warning-fg       "#FF6700"
+
+set highlight-active-color        rgba(154,254,255,0.5)
+set highlight-color               rgba(82,89,93,0.5)
+# set highlight-fg                  rgba(10,15,20,1)
+
+set render-loading-bg             "#BDEDFF"
+set render-loading-fg             "#0f0f0f"
+
+map p print

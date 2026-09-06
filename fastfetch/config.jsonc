@@ -1,0 +1,290 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "source": "arch",
+    "color": {
+      "1": "#bdedff",
+      "2": "#bdedff"
+    },
+    "width": null,
+    "height": null,
+    "padding": {
+      "top": 2,
+      "left": 3,
+      "right": 3
+    },
+    "printRemaining": true,
+    "preserveAspectRatio": false,
+    "recache": false,
+    "position": "left",
+    "chafa": {
+      "symbols": "block+border+space-wide-inverted"
+    }
+  },
+
+  "display": {
+    "stat": false,
+    "pipe": false,
+    "showErrors": false,
+    "disableLinewrap": true,
+    "hideCursor": true,
+    "separator": " : ",
+    "color": {
+      "keys": "#5E7D7E",
+      "title": "#0affff",
+      "output": "#f0fbff",
+      "separator": "#0affff"
+    },
+    "brightColor": true,
+    "duration": {
+      "abbreviation": false,
+      "spaceBeforeUnit": "default"
+    },
+    "size": {
+      "maxPrefix": "YB",
+      "binaryPrefix": "jedec",
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+    "temp": {
+      "unit": "D",
+      "ndigits": 1,
+      "color": {
+        "green": "32",
+        "yellow": "93",
+        "red": "91"
+      },
+      "spaceBeforeUnit": "default"
+    },
+    "percent": {
+      "type": ["bar"],
+      "ndigits": 0,
+      "color": {
+        "green": "#bdedff",
+        "yellow": "#9afeff",
+        "red": "#0affff"
+      },
+      "spaceBeforeUnit": "default",
+      "width": 0
+    },
+    "bar": {
+      "char": {
+        "elapsed": "•",
+        "total": ""
+      },
+      "border": {
+        "left": "[",
+        "right": "]",
+        "leftElapsed": "",
+        "rightElapsed": ""
+      },
+      "color": {
+        "elapsed": "auto",
+        "total": "#bdedff",
+        "border": "#bdedff"
+      },
+      "width": 10
+    },
+    "fraction": {
+      "ndigits": 2
+    },
+    "noBuffer": false,
+    "key": {
+      "width": 0,
+      "type": "icon",
+      "paddingLeft": 0
+    },
+    "freq": {
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+    "constants": []
+  },
+  "general": {
+    "thread": true,
+    "processingTimeout": 5000,
+    "detectVersion": true,
+    "playerName": "",
+    "dsForceDrm": false
+  },
+
+  "modules": [
+    {
+      "type": "custom",
+      "format": "\u001b[34m╭──────────────────────── ────────────────────────╮"
+    },
+    {
+      "type": "title",
+      "key": "user",
+      "keyIcon": "├",
+      "keyColor": "#0affff",
+      // "fqdn": false,
+      "color": {
+        "user": "#5E7D7E",
+        "at": "#bdedff",
+        "host": "#5E7D7E"
+      }
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[34m╰──────────────────────────────────────────────────╯"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[34m╭──────────────────────────────────────────────────╮"
+    },
+  	{
+      "type": "custom",
+      "format": "\u001b[34m│ \u001b[38;5;7m󰪥  \u001b[38;5;6m󰪥  \u001b[38;5;5m󰪥  \u001b[38;5;4m󰪥  \u001b[38;5;3m󰪥  \u001b[38;5;2m󰪥  \u001b[38;5;1m󰪥  \u001b[38;5;0m󰪥  \u001b[38;5;0m󰪥  \u001b[38;5;1m󰪥  \u001b[38;5;2m󰪥  \u001b[38;5;3m󰪥  \u001b[38;5;4m󰪥  \u001b[38;5;5m󰪥  \u001b[38;5;6m󰪥  \u001b[38;5;7m󰪥"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[34m│\u001b[33m╭─────────────────────── ────────────────────────╮"
+    },
+    {
+      "type": "os",
+      "keyIcon": "\u001b[34m│\u001b[33m├"
+    },
+    {
+      "type": "host",
+      "keyIcon": "\u001b[34m│\u001b[33m├󰌢"
+    },
+    {
+      "type": "kernel",
+      "keyIcon": "\u001b[34m│\u001b[33m├"
+    },
+    {
+      "type": "uptime",
+      "keyIcon": "\u001b[34m│\u001b[33m├"
+    },
+    {
+      "type": "packages",
+      "keyIcon": "\u001b[34m│\u001b[33m├󰏖",
+      "disabled": [
+        "apk"
+      ],
+      "combined": false
+    },
+    {
+      "type": "shell",
+      "keyIcon": "\u001b[34m│\u001b[33m├"
+    },
+    {
+      "type": "display",
+      "keyIcon": "\u001b[34m│\u001b[33m├󰍹",
+      "compactType": "none",
+      "preciseRefreshRate": false,
+      "order": null
+    },
+    {
+      "type": "wm",
+      "keyIcon": "\u001b[34m│\u001b[33m├",
+      "detectPlugin": false
+    },
+    {
+      "type": "font",
+      "keyIcon": "\u001b[34m│\u001b[33m├"
+    },
+    {
+      "type": "terminal",
+      "keyIcon": "\u001b[34m│\u001b[33m├"
+    },
+    {
+      "type": "cpu",
+      "keyIcon": "\u001b[34m│\u001b[33m├",
+      "temp": false,
+      "showPeCoreCount": false
+    },
+    {
+      "type": "gpu",
+      "keyIcon": "\u001b[34m│\u001b[33m├󰾲",
+      "driverSpecific": false,
+      "detectionMethod": "pci",
+      "temp": false,
+      "hideType": "none",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      }
+    },
+    {
+      "type": "memory",
+      "keyIcon": "\u001b[34m│\u001b[33m├",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      }
+    },
+    {
+      "type": "swap",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "keyIcon": "\u001b[34m│\u001b[33m├󰿢",
+      "separate": false
+    },
+    {
+      "type": "disk",
+      "keyIcon": "\u001b[34m│\u001b[33m├",
+      "showRegular": true,
+      "showExternal": true,
+      "showHidden": false,
+      "showSubvolumes": false,
+      "showReadOnly": true,
+      "showUnknown": false,
+      "folders": "",
+      "hideFolders": "/efi:/boot:/boot/*",
+      "hideFS": "",
+      "useAvailable": false,
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      }
+    },
+    // {
+    //   "type": "localip",
+    //   "keyIcon": "├󰩟",
+    //   "showIpv4": true,
+    //   "showIpv6": false,
+    //   "showMac": false,
+    //   "showLoop": false,
+    //   "showPrefixLen": true,
+    //   "showMtu": false,
+    //   "showSpeed": false,
+    //   "showFlags": false,
+    //   "compact": false,
+    //   "defaultRouteOnly": false,
+    //   "showAllIps": false,
+    //   "namePrefix": ""
+    // },
+    {
+      "type": "battery",
+      "keyIcon": "\u001b[34m│\u001b[33m├",
+      "temp": false,
+      "percent": {
+        "green": 50,
+        "yellow": 20,
+        "type": 0
+      }
+    },
+    {
+      "type": "poweradapter",
+      "keyIcon": "\u001b[34m│\u001b[33m├󰚥"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[34m│\u001b[33m╰─────────────────────── ────────────────────────╯"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[34m╰──────────────────────────────────────────────────╯"
+    },
+    "break"
+  ]
+}

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+output=$'%d-%m-%Y-%T_video.mp4'
+screenSize=$(xdpyinfo | grep dimension | awk '{print $2}')
+audioSource=$(pactl list sources short | grep monitor | awk '{print $2}')
+parameters=$(ffmpeg -y -framerate 60 -f x11grab -s $screenSize -i :0.0+0,0)
+
+cd ${HOME}/Videos/
+case $1 in
+  "syssound") ffmpeg -y -framerate 60 -f x11grab -s $screenSize -i :0.0+0,0 -f pulse -ac 2 -ar 44100 -i $audioSource -c:v libx264 -crf 15 -preset veryfast $output;;
+  "micsound") ffmpeg -y -framerate 60 -f x11grab -s $screenSize -i :0.0+0,0 -f pulse -ac 1 -i default -c:v libx264 -crf 15 -preset veryfast $output;;
+  "sysmicsound") ffmpeg -y -framerate 60 -f x11grab -s $screenSize -i :0.0+0,0 -f pulse -ac 1 -i default -f pulse -ac 2 -ar 44100 -i $audioSource -map 0 -filter_complex "[1:a][2:a]amerge=inputs=2[a]" -map "[a]" -c:v libx264rgb -crf 15 -preset veryfast $output;;
+  *) ffmpeg -y -framerate 60 -f x11grab -s $screenSize -i :0.0+0,0 -i default -c:v libx264 -crf 15 -preset veryfast $output;;
+esac
+dunstify "Screen-Record" -u normal --icon='${HOME}/.config/dunst/icons/screenrecord.png'

@@ -1,0 +1,151 @@
+{
+    "layer": "top",
+    "height": 10,
+    "margin-top": 1,
+    "margin-bottom": 1,
+    "width": 1430,
+    "spacing": 5,
+    "disable-click": true,
+
+    "modules-left": [
+        "memory", "cpu", "network"
+        // "sway/window",
+        // "sway/mode",
+        // "sway/scratchpad",
+        // "custom/media"
+    ],
+    "modules-center": [
+        "network#net2", "hyprland/workspaces", "backlight"
+    ],
+    "modules-right": [
+        "disk", "clock", "battery"
+        // "mpd",
+        // "idle_inhibitor",
+        // "pulseaudio",
+        // "temperature",
+        // "backlight",
+        // "tray",
+        // "custom/power"
+    ],
+
+    // Modules configuration
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "focused": "",
+            "active": "",
+            "empty": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+          "*": 5
+        },
+        "disable-scroll": true,
+        "active-only": false,
+        "all-outputs": false,
+        "warp-on-scroll": false,
+        "disable-markup": true,
+        "on-click": "deactivate",
+        "click-disable": true
+    },
+
+    "disk": {
+	      "interval": 30,
+	      "format": " :{percentage_used}%",
+	      "unit": "GB"
+    },
+
+    "clock": {
+	      "interval": 1,
+        "format": "  {:%Y/%m/%d    %T}"
+    },
+
+    "cpu": {
+        "format": " : {usage}%",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": " : {}%"
+    },
+
+    "battery": {
+	      "interval": 10,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% {icon}",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": {
+          "charging": ["󰢟 ", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+          "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]}
+    },
+
+    "network": {
+        "tooltip-format": "{essid} via {gwaddr} ",
+        "format-linked": "{essid} (No IP) ",
+        "format": "{essid}: {signaldBm}dBm"
+    },
+    "network#net2": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-ethernet": " ",
+        "format-wifi": "{icon}",
+        "format-disconnected": "󰤮 ",
+        "format-icons": {
+          "default": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "]
+        }
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+
+    // This ones are not displayed in the current waybar
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+}

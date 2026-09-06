@@ -1,0 +1,11 @@
+#!/bin/bash
+
+case $1 in
+  "higher") brightnessctl -e s +1% ;;
+  "lower") brightnessctl -e s 1%- ;;
+  *) brightnessctl -e s 100% && dunstify "Brightness restored" -u normal ;;
+esac
+bright=$(brightnessctl g)
+max_bright=$(brightnessctl m)
+bright_bar=$(($bright*100/$max_bright))
+dunstify -r 100000 -h int:value:$bright_bar "Brightness: $bright" -u normal --icon="${HOME}/.config/dunst/icons/brightness.png"

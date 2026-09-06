@@ -1,0 +1,106 @@
+
+[colors]
+transparent_background_colors = true
+
+[colors.bright]
+black = "#0C090A"
+blue = "#045D5D"
+cyan = "#29465B"
+green = "#4B0150"
+magenta = "#254117"
+red = "#3A3B3C"
+white = "#8B8000"
+yellow = "#25383C"
+
+[colors.cursor]
+cursor = "#00ff00"
+text = "#0f0f0f"
+
+[colors.footer_bar]
+background = "#23282d"
+foreground = "#0AFFFF"
+
+[colors.hints.end]
+background = "#0f0f0f"
+foreground = "#00ff00"
+
+[colors.hints.start]
+background = "#0f0f0f"
+foreground = "#00ff00"
+
+[colors.line_indicator]
+background = "#23282d"
+foreground = "#00ff00"
+
+[colors.normal]
+black = "#23282d"
+blue = "#0AFFFF"
+cyan = "#9AFEFF"
+green = "#9D00FF"
+magenta = "#76FF03"
+red = "#52595D"
+white = "#bbff33"
+yellow = "#5E7D7E"
+
+[colors.primary]
+background = "#0f0f0f"
+bright_foreground = "#000000"
+dim_foreground = "#000000"
+foreground = "#BDEDFF"
+
+[colors.search.focused_match]
+background = "#5E7D7E"
+foreground = "#76FF03"
+
+[colors.search.matches]
+background = "#5E7D7E"
+foreground = "#bbff33"
+
+[colors.selection]
+background = "#2C3539"
+text = "CellForeground"
+
+[colors.vi_mode_cursor]
+cursor = "#0AFFFF"
+text = "#0f0f0f"
+
+[cursor]
+blink_interval = 750
+blink_timeout = 0
+unfocused_hollow = true
+vi_mode_style = "None"
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[font]
+size = 10.0
+
+[font.bold]
+family = "TerminessNerdFont"
+style = "Bold"
+
+[font.bold_italic]
+family = "TerminessNerdFont"
+style = "Bold"
+
+[font.italic]
+family = "TerminessNerdFont"
+style = "Regular"
+
+[font.normal]
+family = "TerminessNerdFont"
+style = "Regular"
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[general]
+# "colors.draw_bold_text_with_bright_colors" = true
+live_config_reload = true
+
+# [window]
+# x = 1
+# y = 1

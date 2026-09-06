@@ -1,0 +1,12 @@
+source /$HOME/.config/nvim/leviathan.vim
+source /$HOME/.config/nvim/settings.vim
+source /$HOME/.config/nvim/shortcuts.vim
+source /$HOME/.config/nvim/autoload/plugins.vim
+source /$HOME/.config/nvim/plugins/VimTex.vim
+source /$HOME/.config/nvim/plugins/AirLine.vim
+source /$HOME/.config/nvim/plugins/CloseTag.vim
+source /$HOME/.config/nvim/plugins/DevIcons.vim
+source /$HOME/.config/nvim/plugins/COC.vim
+source /$HOME/.config/nvim/plugins/Hexokinase.vim
+source /$HOME/.config/nvim/plugins/Silicon.vim
+source /$HOME/.config/nvim/plugins/Yazi.vim

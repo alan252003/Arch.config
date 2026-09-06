@@ -1,0 +1,14 @@
+#!/bin/bash
+
+case $1 in
+  "up") wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+ && iconpath="${HOME}/.config/dunst/icons/volumeup.png" ;;
+  "sup") wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 10%+ && iconpath="${HOME}/.config/dunst/icons/volumeup.png" ;;
+  "down") wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%- && iconpath="${HOME}/.config/dunst/icons/volumedown.png" ;;
+  "sdown") wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- && iconpath="${HOME}/.config/dunst/icons/volumedown.png" ;;
+  "muted") wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && iconpath="${HOME}/.config/dunst/icons/volume.png" ;;
+  "mic")  wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && iconpath="${HOME}/.config/dunst/icons/microphone.png" ;;
+  *) wpctl set-default @DEFAULT_AUDIO_SINK@ && dunstify "Volume restored" -u normal --icon="${HOME}/.config/dunst/icons/volume.png" ;;
+esac
+vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d " " -f2 | awk '{print $1*100}')
+mut=$(wpctl status | grep "MUTED" | cut -d " " -f16 | cut -d "]" -f1)
+dunstify -r 100000 -h int:value:$vol "Volume: $vol%" "[$mut]" -u normal --icon=$iconpath

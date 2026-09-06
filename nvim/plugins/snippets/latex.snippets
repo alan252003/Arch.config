@@ -1,0 +1,545 @@
+snippet equation
+\begin{equation}
+\end{equation}
+endsnippet
+
+snippet itemize
+\begin{itemize}
+	\item
+\end{itemize}
+endsnippet
+
+snippet enumerate
+\begin{enumerate}
+	\item
+\end{enumerate}
+endsnippet
+
+snippet scriptsize
+\scriptsize{}
+endsnippet
+
+snippet footnotesize
+\footnotesize{}
+endsnippet
+
+snippet framequote "Start a frame for quotes or notes"
+\begin{framequote}
+\end{framequote}
+endsnippet
+
+snippet small
+\small{}
+endsnippet
+
+snippet tiny
+\tiny{}
+endsnippet
+
+snippet large
+\large{}
+endsnippet
+
+snippet Large
+\Large{}
+endsnippet
+
+snippet huge
+\huge{}
+endsnippet
+
+snippet Huge
+\Huge{}
+endsnippet
+
+snippet colorBox
+\fcolorbox{teal}{white}{\textcolor{teal}{$\therefore $}\textcolor{black}{$.$}} \vspace{3mm}
+endsnippet
+
+snippet bf
+\textbf{}
+endsnippet
+snippet it
+\textit{}
+endsnippet
+
+snippet bg
+\begin{}
+\end{}
+endsnippet
+
+snippet hs
+\hspace{mm}
+endsnippet
+
+snippet vs
+\vspace{mm}
+endsnippet
+
+snippet frac
+\frac{}{}
+endsnippet
+
+snippet section
+\section{}
+endsnippet
+snippet subsection
+\subsection{}
+endsnippet
+
+snippet lr
+\left \right
+endsnippet
+snippet lr{}
+\left\lbrace \right\rbrace
+endsnippet
+snippet lr[]
+\left\lbrack \right\rbrack
+endsnippet
+snippet lr()
+\left( \right)
+endsnippet
+
+snippet textCode
+\begin{lstlisting}[language=]
+	Code
+\end{lstlisting}
+endsnippet
+
+snippet block
+\begin{block}{}
+	\justifying
+\end{block}
+endsnippet
+
+snippet graphic
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[scale=1]
+    \begin{axis}[xmin=-3,xmax=3,ymin=-2,ymax=2,
+      xmajorgrids=true, ymajorgrids=true, axis lines=center,
+      ylabel=$y$, ylabel style={above right},
+      xlabel=$x$, xlabel style={above right}]
+      \addplot[mark=*,blue] coordinates {
+        (0,0)
+      };
+    \end{axis}
+  \end{tikzpicture}
+  \caption{\centering Nombre del gráfico}
+\end{figure}
+endsnippet
+
+snippet tcolorbox
+\begin{tcolorbox}[width=85 mm,colback=white!100!white,
+  colframe=black!75!gray,fonttitle=\bfseries,
+  title=Box_title]
+  \vspace{-1 mm}
+  \begin{equation}
+    \therefore GDL=2
+  \end{equation}
+  Texto.
+\end{tcolorbox}
+endsnippet
+
+snippet graphdot
+\addplot[cyan,mark=*]plot coordinates{(0,0)};
+endsnippet
+snippet grapharrow
+\draw[thick,blue,->] (0,0)--(1,1);
+endsnippet
+snippet graphsegment
+\addplot[cyan]plot coordinates{(0,0)(0,3)};
+endsnippet
+snippet graphfunction
+\draw[color=cyan,samples=100,domain=0:3] plot (\x,{\x});
+endsnippet
+snippet grapharea
+\filldraw[draw=cyan,fill=cyan,opacity=0.4] (0,0)--(1,1)--(2,0)--cycle;
+endsnippet
+snippet node
+node[](){}
+endsnippet
+
+snippet unit
+\SI{}{}
+endsnippet
+
+snippet gain
+to[amp, >, t=$K_{\mathrm{p}}$]++(2,0)
+endsnippet
+
+snippet figure
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=]{ImageName}
+	\caption{\centering Caption}
+	\label{fig_num}
+\end{figure}
+endsnippet
+
+snippet multipleFigure
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[a]{0.45\linewidth}
+    \centering
+    \includegraphics[scale=0.17]{Fig1}
+    \caption{\centering Caption 1}
+    \label{l1}
+  \end{subfigure}
+  \begin{subfigure}[a]{0.45\linewidth}
+    \centering
+    \includegraphics[scale=0.17]{Fig2}
+    \caption{\centering Caption 2}
+    \label{l2}
+  \end{subfigure}
+  \caption{\centering General caption}
+  \label{label}
+\end{figure}
+endsnippet
+
+snippet minipage
+\begin{minipage}{.2\linewidth}
+  % \vspace{-10 mm}
+	\raggedleft
+	equation or image according to the length
+\end{minipage}
+endsnippet
+
+snippet table
+\begin{table}[H]
+  \centering
+  \begin{tabular}{||>{\centering\arraybackslash}m{2cm}||>{\centering\arraybackslash}m{6cm}||>{\centering\arraybackslash}m{5cm}||}
+
+  \end{tabular}
+  \caption{Caption}
+  \label{tab_num}
+\end{table}
+endsnippet
+
+snippet multicol
+\multicolumn{c}{||}{text}
+endsnippet
+
+snippet matrix
+\begin{bmatrix}
+  a_{11} & a_{12} \\\\
+  a_{21} & a_{22} \\\\
+  \vdots & \vdots \\\\
+  a_{n1} & a_{n2}
+\end{bmatrix}
+endsnippet
+
+snippet 3dplot
+\begin{figure}[ht!]
+  \centering
+  \tdplotsetmaincoords{70}{120}
+    \begin{tikzpicture}
+      \begin{axis}[width=10cm,
+        xmin=-5,xmax=5,
+        ymin=-5,ymax=5,
+        zmin=0,zmax=10,
+        % axis lines=center
+        ]
+        \addplot3[mesh,surf,domain=:]{};
+      \end{axis}
+    \end{tikzpicture}
+  \caption{Robot manipulador de 2 grados de libertad}
+\end{figure}
+endsnippet
+
+snippet circuitdiagram
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[american,cute inductors,scale=1]
+  	\ctikzset{label/align=rotate}
+  \end{circuitikz}
+  \caption{\centering Electric circuit diagram}
+  \label{electric_fig}
+\end{figure}
+endsnippet
+snippet circle "Draw a circle for a circuitikz environment"
+\node (ID) at (,) [circle,draw=black,minimum size=1cm,fill=none,text=black,font=\normal]{text};
+endsnippet
+snippet square "Draw a square for a circuitikz environment"
+\node (ID) at (,) [rectangle,draw=black,minimum size=1cm,fill=white,rounded corners=0.1cm,rotate=0,text=black,font=\normal]{text};
+endsnippet
+snippet rectangle "Draw a rectangle for a circuitikz environment"
+\node (ID) at (,) [rectangle,draw=black,minimum width=1cm,minimum height=1cm,fill=white,rounded corners=0.1cm,rotate=0,text=black,font=\normal]{text};
+endsnippet
+snippet ellipse "Draw a ellipse for a circuitikz environment"
+\node (ID) at (,) [ellipse,draw=black,minimum size=1cm,fill=white,rotate=0,text=black,font=\normal]{};
+endsnippet
+snippet link "Draw a link between nodes through a line with edges, an initial and a final degree, and the value of how smooth is going to be the line"
+\draw[<->,>=latex,line width=1pt,color=black] (ID1) to[out=0, in=180, looseness=1.5] (ID2);
+endsnippet
+snippet arc "Draw an arc of circumference for a circuitikz environment"
+arc (d0:d1:r)
+endsnippet
+
+snippet voltsourceind
+\draw (,) to[V,l=$\begin{array}{c}v_{s} \\ \SI{1}{\volt}\end{array}$] (,);
+endsnippet
+snippet voltsourcedep
+\draw (,) to[cV,l=$ \begin{array}{c}v_{s} \\ \kappa i_{x} \end{array}$] (,);
+endsnippet
+snippet currentsourceind
+\draw (,) to[I,l=$I_{s}$,a=\SI{1}{\ampere}] (,);
+endsnippet
+snippet currentsourcedep
+\draw (,) to[cI,l=$\begin{array}{c}xI_{s} \\ \kappa v_{x}\end{array}$] (,);
+endsnippet
+snippet currentarrow
+f>^=$i_{0}$
+endsnippet
+snippet resistor
+\draw (,) to[R,l=$R_{\#}$,a=\SI{1}{\ohm},f>^=$i_{R}$] (,);
+endsnippet
+snippet variableresistor
+\draw (,) to[vR,l=$vR_{1}$] (,);
+endsnippet
+snippet inductor
+\draw (,) to[L,l=$L_{1}$] (,);
+endsnippet
+snippet variableinductor
+\draw (,) to[variable inductor,l=$L_{1}$] (,);
+endsnippet
+snippet capacitor
+\draw (,) to[C,l=$C_{1}$] (,);
+endsnippet
+snippet polarcapacitor
+\draw (,) to[curved capacitor,l=$C_{1}$] (,);
+endsnippet
+snippet variablecapacitor
+\draw (,) to[variable capacitor,l=$C_{1}$] (,);
+endsnippet
+snippet led
+\draw (,) to[led,l=$l_{1}$,color=black] (,);
+endsnippet
+snippet rectdiodedirect
+\draw (,) to[D,l=$D_{1}$,rotate=0] (,);
+endsnippet
+snippet schottkydiodedirect
+\draw (,) to[Schottky diode,l=$sd_{1}$,rotate=0] (,);
+endsnippet
+snippet zenerdiodedirect
+\draw (,) to[Zener diode,l=$zd_{1}$,rotate=0] (,);
+endsnippet
+snippet tunneldiodedirect
+\draw (,) to[tunnel diode,l=$td_{1}$,rotate=0] (,);
+endsnippet
+snippet photodiodedirect
+\draw (,) to[photodiode,l=$pd_{1}$,rotate=0] (,);
+endsnippet
+snippet varcapdirect
+\draw (,) to[varcap,l=$vc_{1}$,rotate=0] (,);
+endsnippet
+snippet squid
+\draw (,) to[squid,l=$$] (,);
+endsnippet
+snippet barrier
+\draw (,) to[barrier,l=$$] (,);
+endsnippet
+snippet opamp
+\draw (,) node[op amp, noinv input up, achor=in 1](A){LG\#} (,);
+endsnippet
+snippet icDiLpack
+\draw (,) node[dipchip, num pins=\#, draw only pins={}](A){IC\#} (A.pin \#) to (,);
+endsnippet
+snippet icQFpack
+\draw (,) node[qfpchip, num pins=\#, draw only pins={}](A){IC\#} (A.pin\#) to (,);
+endsnippet
+snippet flipflop
+\draw (,) node[flipflop AB, dot on notQ, add async SR]{};
+endsnippet
+snippet npn
+\draw (,) node[npn](){};
+endsnippet
+snippet pnp
+\draw (,) node[pnp](){};
+endsnippet
+snippet transformer
+\draw (,) node[transformer](){} (,);
+endsnippet
+snippet photodiode
+\draw (,) to[pD,l=$pD_{1}$] (,);
+endsnippet
+snippet battery
+\draw (,) to[battery,l=$bat_{1}$] (,);
+endsnippet
+snippet battery1
+\draw (,) to[battery1,l=$bat_{1}$] (,);
+endsnippet
+snippet switchopening
+\draw (,) to[opening switch,l=$s_{1}$] (,);
+endsnippet
+snippet switchclosing
+\draw (,) to[closing switch,l=$s_{1}$] (,);
+endsnippet
+snippet ground
+\draw (,) node[ground]() {};
+endsnippet
+snippet europcurrsource
+\draw (,) to[european current source,l=$i_{s}$] (,);
+endsnippet
+snippet europvoltsource
+\draw (,) to[european voltage source,l=$v_{s}$] (,);
+endsnippet
+snippet sinusoidalvoltsource
+\draw (,) to[sinusoidal voltage source,l=$v_{s}$] (,);
+endsnippet
+snippet transmissionline
+\draw (,) to[transmission line,l=$a$] (,);
+endsnippet
+snippet antenna
+\draw (,) node[antenna](){};
+endsnippet
+snippet rxantenna
+\draw (,) node[rxantenna](){};
+endsnippet
+snippet pmos
+\draw (,) node[pmos](){};
+endsnippet
+snippet americanorport
+\draw (,) node[american or port](){};
+endsnippet
+snippet spdt
+\draw (,) node[spdt](){};
+endsnippet
+snippet lamp
+\draw (,) to[lamp,l=$lamp$] (,);
+endsnippet
+snippet tgeneric
+\draw (,) to[tgeneric,l=$tg_{1}$] (,);
+endsnippet
+snippet ageneric
+\draw (,) to[ageneric,l=$ag_{1}$] (,);
+endsnippet
+snippet memristor
+\draw (,) to[memristor,l=$memr_{1}$] (,);
+endsnippet
+snippet potentiometer
+\draw (,) to[potentiometer,l=$pot_{1}$] (,);
+endsnippet
+snippet varistor
+\draw (,) to[varistor,l=$var_{1}$] (,);
+endsnippet
+snippet photoresistor
+\draw (,) to[photoresistor,l=$pr_{1}$] (,);
+endsnippet
+snippet thermocouple
+\draw (,) to[thermocouple,l=$tc_{1}$] (,);
+endsnippet
+snippet thermistor
+\draw (,) to[thermistor,l=$t_{1}$] (,);
+endsnippet
+snippet thermistorntc
+\draw (,) to[thermistor ntc,l=$ntc_{1}$] (,);
+endsnippet
+snippet fuse
+\draw (,) to[fuse,l=$f_{1}$] (,);
+endsnippet
+snippet afuse
+\draw (,) to[afuse,l=$f_{1}$] (,);
+endsnippet
+snippet pushbutton
+\draw (,) to[push button,l=$b_{1}$] (,);
+endsnippet
+snippet shortcircuit
+\draw to[short,-o] (,) to[short,-o] (,);
+endsnippet
+snippet opencircuit
+\draw to[short,-o] (,) to[open,-o] (,);
+endsnippet
+snippet mosfetn
+\draw (,) node[nigfete,bodydiode, tr circle]{};
+endsnippet
+snippet mosfetp
+\draw (,) node[pigfete,bodydiode, tr circle]{};
+endsnippet
+snippet motor
+\draw (,) to[Telmech=M, n=motor] (,);
+endsnippet
+snippet 7segDisplay
+\draw (,) node[seven segment bits=1111111 dot none box on, fill=black, xslant=0]{};
+endsnippet
+
+snippet damper
+\draw (,) node[dampershape,fill=white]{} to (,);
+endsnippet
+snippet inerter
+\draw (,) to (,) node[inertershape,fill=white]{} to (,);
+endsnippet
+snippet spring
+\draw (,) node[springshape]{};
+endsnippet
+snippet viscoe
+\draw (,) node[viscoeshape,fill=cyan](v){};
+endsnippet
+snippet mass
+\draw (,) to (,) node[massshape,fill=cyan](m){} to (,);
+endsnippet
+
+snippet keyboardMatrix
+% Teclado
+\draw (-7,3)--(-7,5)--(-2,5)--(-2,-1.5)--(-7,-1.5)--cycle;
+\draw (-3,4) node[]{$\ast$} circle (5mm);
+\draw (-4.5,4) node[]{0} circle (5mm);
+\draw (-6,4) node[]{\#} circle (5mm);
+\draw (-3,2.5) node[]{7} circle (5mm);
+\draw (-4.5,2.5) node[]{8} circle (5mm);
+\draw (-6,2.5) node[]{9} circle (5mm);
+\draw (-3,1) node[]{4} circle (5mm);
+\draw (-4.5,1) node[]{5} circle (5mm);
+\draw (-6,1) node[]{6} circle (5mm);
+\draw (-3,-.5) node[]{1} circle (5mm);
+\draw (-4.5,-.5) node[]{2} circle (5mm);
+\draw (-6,-.5) node[]{3} circle (5mm);
+\draw (-2,4) node[above right]{\scriptsize{D}} to (0,4);
+\draw (-2,2.5) node[above right]{\scriptsize{C}} to (0,2.5);
+\draw (-2,1) node[above right]{\scriptsize{B}} to (0,1);
+\draw (-2,-.5) node[above right]{\scriptsize{A}} to (0,-.5);
+\draw (-6,-1.5) node[below right]{\scriptsize{3}} to[short,-o] (-6,-2.5) node[below]{\scriptsize{$Col_{3}$}};
+\draw (-4.5,-1.5) node[below right]{\scriptsize{2}} to[short,-o] (-4.5,-2.5) node[below]{\scriptsize{$Col_{2}$}};
+\draw (-3,-1.5) node[below right]{\scriptsize{1}} to[short,-o] (-3,-2.5) node[below]{\scriptsize{$Col_{1}$}};
+endsnippet
+
+
+snippet diagramline
+\draw (,)--++(,);
+endsnippet
+snippet diagrammixer
+\draw (,) node[mixer](M){};
+\draw (M.center) node[left,font=\small](){$+$};
+\draw (M.center) node[above,font=\small](){$-$};
+\draw (M.center) node[below,font=\small](){$-$};
+endsnippet
+snippet diagraminputarrow
+\draw (,)--++(,) node[inputarrow]{};
+endsnippet
+snippet diagraminputarrowrotated
+\draw (,)--++(,) node[inputarrow,rotate=]{};
+endsnippet
+snippet diagramsum
+% \tikzstyle{suma} = [draw, line width=1.5pt, circle, minimum size=1cm]
+node[suma]{$\Sigma$};
+endsnippet
+snippet diagramoperator
+to[twoport,t=$G_{1}$,n=SP1]++(2,0);
+endsnippet
+snippet diagramoscillator
+node[oscillator]{};
+endsnippet
+snippet diagramphasesshifter
+to[phaseshifter,t=$F$,n=PS1]++(x2,0);
+endsnippet
+snippet diagramlowpass
+to[lowpass,t=$f$,n=LP1]++(x2,0);
+endsnippet
+snippet diagramrectangle
+\draw (x,y)--(x,h)--(len,h)--(len,-h)--(x,-h)--cycle
+(len/2+.5,y) node[]{$G_{1}G_{2}\cdots G_{3}$};
+endsnippet
+
+snippet Laplace
+\mathcal{L}\left\lbrace \right\rbrace
+endsnippet

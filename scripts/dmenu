@@ -1,0 +1,17 @@
+#! /bin/bash
+case $1 in
+  "state")
+    options="Suspend\nRestart\nShutdown"
+    choice=$(echo -e "$options" | dmenu -l 3 -b -i -p "󰤆 " -m 0 -fn "TerminessNerdFont-20" -nb "#18222c" -nf "#bdedff" -sb "#00ff00" -sf "#18222c")
+    case $choice in
+      "Suspend") systemctl suspend ;;
+      "Restart") systemctl reboot ;;
+      "Shutdown") systemctl poweroff;;
+      *) ;;
+    esac
+    ;;
+  "search")
+    dmenu_run -l 5 -b -i -m 0 -fn "TerminessNerdFont-20" -nb "#18222c" -nf "#bdedff" -sb "#0affff" -sf "#18222c" -p " "
+    ;;
+  *) ;;
+esac

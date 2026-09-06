@@ -1,0 +1,38 @@
+fastfetch
+
+# For prompt
+PS1='\[\e[38;5;51m\]┌──\[\e[38;5;51m\](\[\e[38;5;239;1m\]\u\[\e[0;38;5;195m\]@\[\e[38;5;239;1m\]\h\[\e[0;38;5;51m\])\[\e[38;5;51m\] \[\e[38;5;240m\]{\[\e[38;5;195m\]\w\[\e[38;5;240m\]}\n\[\e[38;5;51m\]└─\[\e[38;5;240m\][\[\e[38;5;195m\]\t\[\e[38;5;240m\]]\[\e[38;5;51m\]:\[\e[0m\]'
+
+
+# Aliases
+# General
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias n="nvim"
+alias s="sudo"
+alias sn="sudo nvim"
+
+# Aesthetic
+alias ls="eza --color=always --icons=always"
+
+# Share screen HDMI
+alias share-screen="hyprctl keyword monitor "HDMI-A-1,preferred,auto,1,mirror,eDP-1""
+
+# For Arduino
+alias micro-compile="arduino-cli compile --fqbn esp32:esp32:esp32" # add directory project
+alias micro-upload="arduino-cli upload --fqbn esp32:esp32:esp32 --upload-property upload.speed=115200" # add port and directory project
+
+# For esp-idf
+alias get-idf='source ${HOME}/esp/esp-idf/export.sh'
+alias idf-project='idf.py create-project' # create a project directory
+alias idf-component='idf.py create-component -C components' # create components directory
+
+# Fucntions
+# For Yazi
+function fm() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}

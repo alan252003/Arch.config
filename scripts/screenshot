@@ -1,0 +1,26 @@
+#!/bin/bash
+
+case $1 in
+  "select")
+    # scrot "$output" -s -l mode=edge && dunstify "Screenshot taken: Selected area" -u low --icon="${HOME}/.config/dunst/icons/sel_screenshot.png"
+    hyprshot -m region -o ${HOME}/Pictures/Screenshots/
+    dunstify "Screenshot taken: Selected region" -u low --icon="${HOME}/.config/dunst/icons/sel_screenshot.png"
+    ;;
+  "window")
+    # scrot "$output" -u -b && dunstify "Screenshot taken: focused window" -u low --icon="${HOME}/.config/dunst/icons/full_screenshot.png"
+    hyprshot -m window -o ${HOME}/Pictures/Screenshots/
+    dunstify "Screenshot taken: Focused window" -u low --icon="${HOME}/.config/dunst/icons/full_screenshot.png"
+
+    ;;
+  "monitor")
+    hyprshot -m output -o ${HOME}/Pictures/Screenshots/
+    dunstify "Screenshot taken: Full screen" -u low --icon="${HOME}/.config/dunst/icons/vision.png"
+
+    ;;
+  *)
+    # scrot "$output" && dunstify "Screenshot taken" -u low --icon="${HOME}/.config/dunst/icons/full_screenshot.png"
+    #
+    hyprshot -m active -o ${HOME}/Pictures/Screenshots/
+    dunstify "Screenshot taken" -u low --icon="${HOME}/.config/dunst/icons/screenshot.png"
+    ;;
+esac
