@@ -1,30 +1,33 @@
 # Arch.config
 
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣷⣤⣙⢻⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⡿⠛⠛⠿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⠿⣆⠀⠀⠀⠀
-⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀
-⠀⢀⣾⣿⣿⠿⠟⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠻⠿⣿⣿⣷⡀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⡆
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⡄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⡄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣷⣤⣙⢻⣿⣿⣿⣿⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀
+⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄
+⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⡿⠛⠛⠿⣿⣿⣿⣿⣿⡄
+⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⡄
+⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⠿⣆
+⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣷⣦⡀
+⠀⢀⣾⣿⣿⠿⠟⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠻⠿⣿⣿⣷⡀
 ⣠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⣄
 
-> This repo contains the config files for __arch-linux__ with hyprland to take after __TRON__ aesthethics and also to make it light-weight and efficient. You will also be able to integrate this distro with __Black-Arch__ repositories.
+> This repo contains the config files for __arch-linux__ with hyprland to take after __TRON__ aesthethics and also try to make it minimalist and efficient. You will also be able to integrate this distro with __Black-Arch__ repositories.
 Most of the tools used in this repo are TUI or CLI tools, in order to keep the philosophy of keyboard efficiency with mouse-free navigation rather than point and click actions.
+The porpuse of this repo is to give you an start point in arch-linux, so you can customize your linux distro and create your own repo for not losing your config files in case you lose your device or your operative system.
 ---
 
 ## ScreenShots
+- Alacritty
 ![Arch Linux/Hyprland](Pictures/01_ScreenShot.png)
+- Neovim and compilig LaTeX code
 ![NeoVim](Pictures/02_ScreenShot.png)
 
 ---
 
-## Tools
+## Main tools
 + Window Manager: [Hyprland](https://wiki.hypr.land)
 + Display Manager: [Ly](https://github.com/fairyglade/ly)
 + Terminal emulator: [Alacritty](https://alacritty.org/)
@@ -35,16 +38,12 @@ Most of the tools used in this repo are TUI or CLI tools, in order to keep the p
 + Font: [TerminessNerdFont](https://www.nerdfonts.com/font-downloads)
 + Bar: [Waybar](https://waybar.net/)
 + Image Viewer: [Feh](https://feh.finalrewind.org/)
-+ Video Viewer: [Smplayer](https://www.smplayer.info/)
++ Media Player: [Smplayer](https://www.smplayer.info/)
 
 ---
 
 ## Preinstallation
-* Download https://lidsol.fi-b.unam.mx/archlinux/iso/
-    ```bash
-    wget https://lidsol.fi-b.unam.mx/archlinux/iso/2026.09.01/archlinux-2026.09.01-x86_64.iso
-
-    ```
+> Whether you even do not know how to start, i will leave a tutorial document in spanish for the commands and adjustments i made in my device to install arch-linux manually.
 
 ---
 
@@ -56,13 +55,11 @@ Most of the tools used in this repo are TUI or CLI tools, in order to keep the p
     ```
 * You may rename this repo as `.config` in your `${HOME}` directory and copy the other files you had in the original `.config` file:
     ```bash
-    mv ${HOME}/.config/* ${HOME}/Arch.config
+    mv ${HOME}/Arch.config/* ${HOME}/.config/
     ```
+    Optionally you can remove the repo directory:
     ```bash
-    rm -r .config
-    ```
-    ```bash
-    mv Arch.config .config
+    rm -r Arch.config
     ```
 * Execute the `archinstall.sh` script to install all needed tools:
     ```bash
@@ -71,6 +68,7 @@ Most of the tools used in this repo are TUI or CLI tools, in order to keep the p
     ```bash
     bash ${HOME}/.config/scripts/archinstall.sh
     ```
+> Read the script before you execute it.
 
 ---
 
