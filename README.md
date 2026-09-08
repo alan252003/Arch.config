@@ -14,7 +14,7 @@
 ⠀⢀⣾⣿⣿⠿⠟⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠻⠿⣿⣿⣷⡀ \
 ⣠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⣄
 
-> This repo contains the config files for __arch-linux__ with hyprland to take after __TRON__ aesthethics and also try to make it minimalist and efficient. You will also be able to integrate this distro with __Black-Arch__ repositories.
+> This repo contains the config files for __arch-linux__ with hyprland to take after futuristic aesthethics and also try to make it minimalist and efficient. You will also be able to integrate this distro with __Black-Arch__ repositories.
 Most of the tools used in this repo are TUI or CLI tools, in order to keep the philosophy of keyboard efficiency with mouse-free navigation rather than point and click actions.
 The porpuse of this repo is to give you an start point in arch-linux, so you can customize your linux distro and create your own repo for not losing your config files in case you lose your device or your operative system.
 ---
